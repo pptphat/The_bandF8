@@ -95,12 +95,12 @@ html {
 #nav, .subnav {
    list-style-type: none;
 }
+
 #nav > li {
     display: inline-block;
 }
 
 #nav li {
-    display: inline-block;
     position: relative;
 }
 
@@ -121,27 +121,31 @@ html {
     display: block;
     cursor: pointer;
 }
+#nav li:hover .subnav{
+    display: block;
 
-#nav .nav-arrow-down {
-    font-size: 14px;
 }
 
-#header #search-btn {
-    float: right;
-    padding: 0 21px;
-   
+#nav > li:hover > a,
+#nav .subnav li:hover a{
+    background-color: #ccc;
+    color: black;
 }
 
-#header #search-btn:hover {
-    color:#fff;
-    background-color: red;
-    cursor: pointer;
+#nav .subnav{
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
 }
 
-#header .search-icon {
-    color: #fff;
-    font-size: 20px;
-    line-height: 46px;
+#nav .subnav a{
+    color: black;
+    padding: 0 16px;
+    line-height: 38px;
 }
 
 #nav > li:hover > a,
@@ -166,13 +170,33 @@ html {
     line-height: 38px;
 }
 
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
 
+#header #search-btn {
+    float: right;
+    padding: 0 21px;
+   
+}
+
+#header #search-btn:hover {
+    color:#fff;
+    background-color: red;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
 
 #slider {
     position: relative;
     margin-top: 46px;
     padding-top: 50%; /*height = 1/2 width*/
-    background: url('/The_band/assets/img/slider/ny.jpg') top center /cover no-repeat;
+    background: url('/assets/img/slider/ny.jpg') top center /cover no-repeat;
 }
 
 #slider .text-content{
